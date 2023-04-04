@@ -34,11 +34,11 @@ const fetchTodosAndRender = () => {
     })
     .then((responseData) => {
       tasks = responseData.todos;
-      renderTasks();
+      renderApp();
     });
 };
 
-const renderTasks = () => {
+const renderApp = () => {
 const appEl = document.getElementById('app');
   const tasksHtml = tasks
     .map((task) => {
@@ -123,7 +123,7 @@ for (const deleteButton of deleteButtons) {
       .then((responseData) => {
         // Получили данные и рендерим их в приложении
         tasks = responseData.todos;
-        renderTasks();
+        renderApp();
       });
 
     //renderTasks();
