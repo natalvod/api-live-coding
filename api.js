@@ -33,7 +33,7 @@ export function deleteTodo({ token, id }) {
 }
 
 export function addTodo({ text, token }) {
-   return fetch(host, {
+    return fetch(host, {
         method: "POST",
         body: JSON.stringify({
             text,
@@ -45,4 +45,17 @@ export function addTodo({ text, token }) {
         .then((response) => {
             return response.json();
         })
+}
+
+//https://github.com/GlebkaF/webdev-hw-api/blob/main/pages/api/user/README.md
+export function login({ login, password }) {
+    return fetch("https://webdev-hw-api.vercel.app/api/user/login", {
+        method: "POST",
+        body: JSON.stringify({
+            login,
+            password
+        }),
+    }).then((response) => {
+        return response.json();
+    })
 }
