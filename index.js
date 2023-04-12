@@ -11,6 +11,7 @@
 import { addTodo, deleteTodo, getTodos } from "./api.js";
 import { renderLoginComponent } from "./components/login-component.js";
 import { formatDateToRu, formatDateToUs } from "./lib/formatDate/formatDate.js";
+import { format } from "date-fns";
 
 
 // const buttonElement = document.getElementById("add-button");
